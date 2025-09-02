@@ -69,7 +69,8 @@ JavaScript (Vanilla JS) – Game logic, AI, timer, and storage
 
 🎮 
 
-🏆 <img width="2778" height="1346" alt="image" src="https://github.com/user-attachments/assets/87f76d5c-8984-4617-bc9d-99ceeaca7296" />
+<img width="1406" height="912" alt="image" src="https://github.com/user-attachments/assets/3fadcb20-c93b-4aa0-b834-90864500e38d" />
+
 
 
 
