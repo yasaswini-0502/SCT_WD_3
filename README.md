@@ -24,7 +24,9 @@ A modern Tic-Tac-Toe web game built with HTML, CSS, and JavaScript, featuring:
 ➤ ✨ Win Line Animation – Highlights the winning combination dynamically.
 
 ➤ 🏆 Leaderboard –
+
  ✔ Tracks wins, losses, and draws for both Player X and Player O.
+ 
  ✔ Data is stored in localStorage, so stats remain even after refreshing.
  
 ➤ 📱 Responsive UI – Modern glassmorphism effect, gradients, hover animations, and glowing highlights.
