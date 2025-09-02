@@ -30,9 +30,10 @@ A modern Tic-Tac-Toe web game built with HTML, CSS, and JavaScript, featuring:
 ➤ 📱 Responsive UI – Modern glassmorphism effect, gradients, hover animations, and glowing highlights.
 
 
-@ 📂 Project Structure
+# 📂 Project Structure
 
 📦 Tic-Tac-Toe
+
  ┣ 📜 index.html         # Main game page
  
  ┣ 📜 leaderboard.html   # Leaderboard page
