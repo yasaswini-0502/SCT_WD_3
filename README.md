@@ -48,9 +48,9 @@ A modern Tic-Tac-Toe web game built with HTML, CSS, and JavaScript, featuring:
 
 4. The game ends when:
 
-A player gets 3 in a row ➝ Win 🎉
+   A player gets 3 in a row ➝ Win 🎉
 
-All cells are filled ➝ Draw 😲
+   All cells are filled ➝ Draw 😲
 
 5. Results are saved to the Leaderboard automatically.
 
