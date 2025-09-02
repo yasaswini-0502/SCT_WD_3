@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Black background */
+      font-family: Arial, sans-serif;
+    }
+
+    .leaderboard-container {
+      text-align: center;
+      background: rgba(252, 127, 233, 0.9);
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.8);
+      width: 600px;
+      margin: 80px auto;
+    }
+
+    .leaderboard-container h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: #15110e;
+      text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+      margin-bottom: 30px;
+    }
+
+    #leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 25px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    #leaderboard-table th, 
+    #leaderboard-table td {
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2em;
+      border: 1px solid #ccc;
+    }
+
+    #leaderboard-table th {
+      background: #242223;
+      color: #fff;
+    }
+
+    .back-btn {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #000000, #333333);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(135deg, #e0dcb6, #000000);
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="leaderboard-container">
+    <h1>🏆 Leaderboard</h1>
+    <table id="leaderboard-table">
+      <tr>
+        <th>Player</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Draws</th>
+        <th>Total Games</th>
+      </tr>
+      <tr>
+        <td>Player X</td>
+        <td id="xWins">0</td>
+        <td id="xLosses">0</td>
+        <td id="xDraws">0</td>
+        <td id="xTotal">0</td>
+      </tr>
+      <tr>
+        <td>Player O</td>
+        <td id="oWins">0</td>
+        <td id="oLosses">0</td>
+        <td id="oDraws">0</td>
+        <td id="oTotal">0</td>
+      </tr>
+    </table>
+    <a href="index.html" class="back-btn">⬅ Back to Game</a>
+  </div>
+
+  <script>
+    function loadLeaderboard() {
+      let data = JSON.parse(localStorage.getItem("leaderboard")) || {
+        X: { wins: 0, losses: 0, draws: 0 },
+        O: { wins: 0, losses: 0, draws: 0 }
+      };
+
+      // Ensure missing properties exist
+      data.X.wins = data.X.wins || 0;
+      data.X.losses = data.X.losses || 0;
+      data.X.draws = data.X.draws || 0;
+      data.O.wins = data.O.wins || 0;
+      data.O.losses = data.O.losses || 0;
+      data.O.draws = data.O.draws || 0;
+
+      document.getElementById("xWins").textContent = data.X.wins;
+      document.getElementById("xLosses").textContent = data.X.losses;
+      document.getElementById("xDraws").textContent = data.X.draws;
+      document.getElementById("xTotal").textContent = data.X.wins + data.X.losses + data.X.draws;
+
+      document.getElementById("oWins").textContent = data.O.wins;
+      document.getElementById("oLosses").textContent = data.O.losses;
+      document.getElementById("oDraws").textContent = data.O.draws;
+      document.getElementById("oTotal").textContent = data.O.wins + data.O.losses + data.O.draws;
+    }
+
+    loadLeaderboard();
+  </script>
+</body>
+</html>

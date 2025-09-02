@@ -1,0 +1,178 @@
+/* Background Gradient */
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0c0b03, #1f1f1e); /* Yellow Gradient */
+  margin: 0;
+  color: #000;
+}
+
+/* Game Container */
+.game-container {
+  text-align: center;
+  background: rgba(252, 127, 233, 0.818);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* Title */
+h1 {
+  margin-bottom: 10px;
+  font-size: 2.8em;
+  font-weight: bold;
+  background: darkviolet; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;               
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+}
+
+
+/* Status Text */
+#status {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #53bff5ec; /* Black text for contrast */
+  text-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* Board Styling */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Cell Styling */
+.cell {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 2.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* X color */
+.cell.x {
+  color: #ffffff; /* White X */
+  text-shadow: 0 0 8px rgba(12, 9, 14, 0.911);
+}
+
+/* O color */
+.cell.o {
+  color: #000000; /* Black O */
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+/* Hover Effect */
+.cell:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Restart Button */
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #000000, #333333); /* Black Button */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #e0dcb6, #000000); /* Yellow + Black on hover */
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(120, 106, 119, 0.6);
+}
+/* Timer */
+#timer {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 14px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Winning line */
+#win-line {
+  position: absolute;
+  width: 0;
+  height: 6px;
+  background: #ffeb3b;
+  box-shadow: 0 0 15px #ffeb3b;
+  border-radius: 3px;
+  transform-origin: left center;
+  transition: all 0.5s ease;
+}
+
+/* Animate X & O */
+.cell.player-x, .cell.player-o {
+  animation: popIn 0.4s ease;
+}
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Flashing Winner */
+.status-win {
+  animation: flashText 1s infinite;
+}
+@keyframes flashText {
+  0% { color: #ffeb3b; }
+  50% { color: #fff; }
+  100% { color: #ffeb3b; }
+}
+
+/* View Leaderboard button styled like Restart */
+.btn-leaderboard {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #000000, #333333); /* same as Restart */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.btn-leaderboard:hover {
+  background: linear-gradient(135deg, #e0dcb6, #000000); /* same hover */
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(120, 106, 119, 0.6);
+}

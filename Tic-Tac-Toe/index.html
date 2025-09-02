@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Timer Top Left -->
+  <div id="timer">Timer Left:⏳ 10</div>
+
+  <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+    <p id="status">Player X's Turn</p>
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+      <!-- Line Overlay -->
+      <div id="win-line"></div>
+    </div>
+    <button id="resetBtn">Restart Game</button>
+    <a href="leaderboard.html" class="btn-leaderboard">🏆 View Leaderboard</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
