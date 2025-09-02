@@ -14,6 +14,7 @@ A modern Tic-Tac-Toe web game built with HTML, CSS, and JavaScript, featuring:
 ✅ Persistent Leaderboard (using localStorage) to track wins, losses, and draws
 
 
+
 # 🚀 Features
 
 ➤ ⏱ Turn Timer – Players must make a move within 10 seconds, otherwise the turn switches automatically.
@@ -33,8 +34,11 @@ A modern Tic-Tac-Toe web game built with HTML, CSS, and JavaScript, featuring:
 
 📦 Tic-Tac-Toe
  ┣ 📜 index.html         # Main game page
+ 
  ┣ 📜 leaderboard.html   # Leaderboard page
+ 
  ┣ 📜 style.css          # Game styles
+ 
  ┣ 📜 script.js          # Game logic (timer, moves, AI, leaderboard)
 
 
