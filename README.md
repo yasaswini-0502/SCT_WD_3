@@ -62,21 +62,9 @@ CSS3 – Styling, animations, effects
 
 JavaScript (Vanilla JS) – Game logic, AI, timer, and storage
 
-
-
-
-# 📸 Screenshots
-
-🎮 
-
-<img width="1406" height="912" alt="image" src="https://github.com/user-attachments/assets/3fadcb20-c93b-4aa0-b834-90864500e38d" />
-
-
-
-
-
-
-
+# ▶ Project Demo Video Link :
+https://drive.google.com/file/d/1WK9SVurSVcvUaksBxIVU7iWNjlUdWQHE/view?usp=drivesdk
+ 
 # 🌟 Future Improvements
 
 Add multiplayer (online/local) mode
